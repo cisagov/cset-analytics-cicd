@@ -84,7 +84,7 @@ jobs:
         run: terraform --version
       # Initialize Terraform
       - name: Terraform init
-        working-directory: ./domain-manager-cicd/terraform
+        working-directory: ./terraform
         run: terraform init -input=false
 
       # Select terraform workspace
