@@ -21,7 +21,7 @@ jobs:
     env:
       IMAGE_REPO: cset-analytics-ui
     outputs:
-      tag: ${{ steps.var.outputs.tag }}
+      tag: ${{ steps.vars.outputs.tag }}
     steps:
       - uses: actions/checkout@v2
         with:
