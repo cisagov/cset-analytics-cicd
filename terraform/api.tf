@@ -51,7 +51,7 @@ resource "aws_lb_listener_rule" "api" {
 # ===========================
 module "api_container" {
   source          = "github.com/cloudposse/terraform-aws-ecs-container-definition"
-  container_name  = "api"
+  container_name  = local.api_container_name
   container_image = "${var.api_image_repo}:${var.api_image_tag}"
   essential       = "true"
   log_configuration = {
