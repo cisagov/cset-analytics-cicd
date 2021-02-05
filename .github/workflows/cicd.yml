@@ -111,6 +111,6 @@ jobs:
 
 
       # Apply terraform
-      # - name: Terraform Apply
-      #   working-directory: ./terraform
-      #   run: terraform apply -input=false -auto-approve -var-file ./vars/$ENVIRONMENT.tfvars -var="api_image_tag=${{needs.build_api.outputs.tag}}" -var="ui_image_tag=${{needs.build_ui.outputs.tag}}"
+      - name: Terraform Apply
+        working-directory: ./terraform
+        run: terraform apply -input=false -auto-approve -var-file ./vars/$ENVIRONMENT.tfvars -var="api_image_tag=${{needs.build_api.outputs.tag}}" -var="ui_image_tag=${{needs.build_ui.outputs.tag}}"
