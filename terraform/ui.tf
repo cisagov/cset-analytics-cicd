@@ -50,7 +50,7 @@ resource "aws_cloudwatch_log_group" "ui" {
 # CONTAINER DEFINITION
 # ===========================
 module "ui_container" {
-  source          = "github.com/cloudposse/terraform-aws-ecs-container-definition"
+  source          = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.47.0"
   container_name  = local.ui_container_name
   container_image = "${var.ui_image_repo}:${var.ui_image_tag}"
   essential       = "true"
